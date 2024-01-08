@@ -5,6 +5,7 @@ package chess;
  * <p>
  * Note: You can add to this class, but you may not alter
  * signature of the existing methods.
+ * Update test.
  */
 public class ChessBoard {
 
