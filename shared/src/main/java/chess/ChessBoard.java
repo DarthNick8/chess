@@ -1,5 +1,7 @@
 package chess;
 
+import chess.ChessPiece.PieceType;
+
 /**
  * A chessboard that can hold and rearrange chess pieces.
  * <p>

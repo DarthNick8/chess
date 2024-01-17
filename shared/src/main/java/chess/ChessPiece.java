@@ -1,5 +1,7 @@
 package chess;
 
+import chess.pieces.BishopMoveCalculator;
+
 import java.util.Collection;
 
 /**
@@ -51,6 +53,14 @@ public class ChessPiece {
      * @return Collection of valid moves
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
-        throw new RuntimeException("Not implemented");
+        if (this.getPieceType() == PieceType.BISHOP) {
+            BishopMoveCalculator bishopMoveCalculator = new BishopMoveCalculator();
+            return bishopMoveCalculator.pieceMoves(board, myPosition);
+        }
+        return null;
+    }
+
+    public boolean isOpponent(ChessPiece otherPiece) {
+        return this.getTeamColor() != otherPiece.getTeamColor();
     }
 }
